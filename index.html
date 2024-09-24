@@ -9,40 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
+
     <main>
-        <img src="/assets/bag.png" alt="Sacola de Compras" />
+        <img src="./assets/bag.png" alt="sacola de compras">
         <form>
-            <input type="text" placeholder="Digite o item que deseja adicionar" />
-            <button>Salvar item</button>
+            <input class="input-item" id="input-item" type="text"
+                placeholder="Digite o item que deseja adicionar"></input>
+            <button class="button-item" id="adicionar-item">Salvar item</button>
         </form>
 
-        <ul>
-            <h2>Lista de Compras</h2>
-            <hr />
-            <li>
-                <div>
-                    <div>
-                        <input type="checkbox" />
-                        <p>Ração de gato</p>
-                    </div>
+        <div class="container-lista">
+            <h2>Lista de compras</h2>
+            <hr>
 
-                    <div>
-                        <button>
-                            <img src="assets/delete.svg" alt="Excluir" />
-                        </button>
-                        <button>
-                            <img src="assets/edit.svg" alt="Editar" />
-                        </button>
+            <ul id="lista-de-compras">
+                <li>
+                    <div class="lista-item-container">
+                        <div>
+                            <div class="container-checkbox">
+                                <label for="checkbox-1">
+                                    <input type="checkbox" class="input-checkbox" id="checkbox-1" />
+                                    <div class="checkbox-customizado checked"></div>
+                                </label>
+                            </div>
+                            <p>Ração de gato</p>
+                        </div>
+
+                        <div>
+                            <button class="item-lista-button">
+                                <img src="./assets/delete.svg" alt="remover">
+                            </button>
+                            <button class="item-lista-button">
+                                <img src="./assets/edit.svg" alt="editar">
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <p>Segunda-feira (31/01/2022) às 08:30</p>
-            </li>
-        </ul>
+                    <p class="texto-data">Segunda-feira (31/10/2022) às 08:30</p>
+                </li>
+            </ul>
+        </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
